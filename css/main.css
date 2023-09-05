@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Montserrat:wght@500;700&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(30, 38%, 92%);
+    margin: 0 20px;
+    min-height: 100vh;
+}
+.page .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    border-radius: 10px;
+    background-color: white;
+    overflow: hidden;
+}
+@media (min-width:768px) {
+    .page .container{
+        flex-direction: row;
+        width: 500px;
+    }
+}
+@media (max-width:767px) {
+    .container img.mobile{
+        width: 300px;
+    }
+    .container img.desktop{
+        display: none;
+    }
+}
+@media (min-width:768px) {
+    .container img.mobile{
+        display: none;
+    }
+    .container img.desktop{
+        width: 250px;
+        flex: 1;
+    }
+}
+.container .info{
+    flex: 1;
+    padding: 20px;
+}
+.container .info h1{
+    margin: 0 0 0.67em;
+    font-size: 12px;
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Montserrat', sans-serif;
+}
+.container .info h2{
+    font-weight: 700;
+    text-transform: capitalize;
+    font-size: 30px;
+    margin-bottom: 0.67em;
+    font-family: 'Fraunces', serif;
+}
+.container .info p{
+    font-size: 12px;
+    line-height: 1.5;
+    color: hsl(228, 12%, 48%);
+    margin-bottom: 0.67em;
+    font-family: 'Montserrat', sans-serif;
+}
+.container .info .price{
+    margin-bottom: 0.67em;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    display: flex;
+    align-items: center;
+}
+.container .info .price span{
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 20px;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+.container .info a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 10px;
+    background-color: hsl(158, 36%, 37%);
+    padding: 10px 0;
+    color: white;
+    text-transform: capitalize;
+    transition: .5s;
+}
+.container .info a:hover{
+    background-color: hsl(212, 21%, 14%);
+}
+.container .info a img{
+    margin-right: 10px;
+}
